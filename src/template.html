@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <section>
+        <div class="top-bar">
+            <i class="fa fa-check-square"></i>
+            My TO-DO
+        </div>
+    </section>
+    <!-- Main -->
+    <section class="main-section">
+       <!-- Side Panel -->
+        <div class="side-panel-container active" id="side-panel">
+            <h1><i class="fa fa-home"></i>Home</h1>
+            <ul>
+                <li id="home-today" class="active"><span class="stat-mark">></span> Today</li>
+                <li id="home-week"><span class="stat-mark"></span> This Week</li>
+            </ul>
+            <!-- Projects List -->
+            <h1><i class="fa fa-file"></i>Projects</h1>
+            <ul id="projects">
+                <li class="project-nav active"><span class="stat-mark">></span>Project 1</li>
+                <li class="project-nav"><span class="stat-mark">></span> Project 2</li>
+                <li id="add-project-btn"><i class="fa fa-plus-circle"></i>Add New Project</li>
+            </ul>
+            <a href="" id="sticky-show">
+                <h1><i class="fa fa-note-sticky"></i>Sticky Notes</h1>
+            </a>
+            <div class="side-panel-toggle" id="panel-toggle">
+                <i class="fa fa-arrow-left"></i>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+        
+        <!-- Tasks -->
+        <div class="task-display">
+            <div class="task done">
+                <div class="task-head">
+                    <i class="fa fa-check-square"></i>
+                    <i class="fa fa-square"></i>
+                    <span class="task-name">Task Name</span>
+                </div>
+                <div class="task-control">
+                    <span class="task-date">Aug 13th</span>
+                    <i class="fa fa-pen"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="task high">
+                <div class="task-head">
+                    <i class="fa fa-check-square"></i>
+                    <i class="fa fa-square"></i>
+                    <span class="task-name">Task Name</span>
+                </div>
+                <div class="task-control">
+                    <span class="task-date">Aug 13th</span>
+                    <i class="fa fa-pen"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <button class="new-task-btn" id="add-task-btn"><i class="fa fa-plus-circle"></i>Add New Task</button>
+        </div>
+    </section>
+    
+</body>
+</html>
