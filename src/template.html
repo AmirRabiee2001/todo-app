@@ -20,15 +20,21 @@
         <div class="side-panel-container active" id="side-panel">
             <h1><i class="fa fa-home"></i>Home</h1>
             <ul>
-                <li id="home-today" class="active"><span class="stat-mark">></span> Today</li>
+                <li id="home-today"><span class="stat-mark">></span> Today</li>
                 <li id="home-week"><span class="stat-mark"></span> This Week</li>
             </ul>
             <!-- Projects List -->
             <h1><i class="fa fa-file"></i>Projects</h1>
             <ul id="projects">
-                <li class="project-nav active"><span class="stat-mark">></span>Project 1</li>
-                <li class="project-nav"><span class="stat-mark">></span> Project 2</li>
-                <li id="add-project-btn"><i class="fa fa-plus-circle"></i>Add New Project</li>
+                <li id="add-project-btn">
+                    <i class="fa fa-plus-circle"></i>Add New Project
+                    <!-- New project form -->
+                    <form action="#" class="new-project-form" id="new-project-form">
+                        <label for="project-name">Name: </label>
+                        <input type="text" id="project-name">
+                        <input type="submit" value="Add">
+                    </form>
+                </li>
             </ul>
             <a href="" id="sticky-show">
                 <h1><i class="fa fa-note-sticky"></i>Sticky Notes</h1>
@@ -40,34 +46,28 @@
         </div>
         
         <!-- Tasks -->
-        <div class="task-display">
-            <div class="task done">
-                <div class="task-head">
-                    <i class="fa fa-check-square"></i>
-                    <i class="fa fa-square"></i>
-                    <span class="task-name">Task Name</span>
+        <div class="task-display" id="task-display">
+            <!-- tasks go here -->
+        </div>
+        <!-- new task form -->
+        <div class="new-task-btn" id="add-task-btn">
+            <i class="fa fa-plus-circle"></i>Add New Task
+            <form class="new-task-form" id="new-task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name">
+                <label for="task-date">Task Due-Date:</label>
+                <input type="date" id="task-date">
+                <div class="priority-btns">
+                    <button type="button" class="priority low-btn" id="low">Low</button>
+                    <button type="button" class="priority med-btn" id="medium">Medium</button>
+                    <button type="button" class="priority high-btn" id="high">High</button>
                 </div>
-                <div class="task-control">
-                    <span class="task-date">Aug 13th</span>
-                    <i class="fa fa-pen"></i>
-                    <i class="fa fa-times"></i>
-                </div>
-            </div>
-            <div class="task high">
-                <div class="task-head">
-                    <i class="fa fa-check-square"></i>
-                    <i class="fa fa-square"></i>
-                    <span class="task-name">Task Name</span>
-                </div>
-                <div class="task-control">
-                    <span class="task-date">Aug 13th</span>
-                    <i class="fa fa-pen"></i>
-                    <i class="fa fa-times"></i>
-                </div>
-            </div>
-            <button class="new-task-btn" id="add-task-btn"><i class="fa fa-plus-circle"></i>Add New Task</button>
+                <input type="submit" value="Add">
+                <button class="btn close" type="button">Close</button>
+            </form>
         </div>
     </section>
+
     
 </body>
 </html>

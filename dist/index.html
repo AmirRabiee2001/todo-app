@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <script defer src="bundle.js"></script></head>
 <body>
+    <!-- Top Bar -->
+    <section>
+        <div class="top-bar">
+            <i class="fa fa-check-square"></i>
+            My TO-DO
+        </div>
+    </section>
+    <!-- Main -->
+    <section class="main-section">
+       <!-- Side Panel -->
+        <div class="side-panel-container active" id="side-panel">
+            <h1><i class="fa fa-home"></i>Home</h1>
+            <ul>
+                <li id="home-today"><span class="stat-mark">></span> Today</li>
+                <li id="home-week"><span class="stat-mark"></span> This Week</li>
+            </ul>
+            <!-- Projects List -->
+            <h1><i class="fa fa-file"></i>Projects</h1>
+            <ul id="projects">
+                <li id="add-project-btn">
+                    <i class="fa fa-plus-circle"></i>Add New Project
+                    <!-- New project form -->
+                    <form action="#" class="new-project-form" id="new-project-form">
+                        <label for="project-name">Name: </label>
+                        <input type="text" id="project-name">
+                        <input type="submit" value="Add">
+                    </form>
+                </li>
+            </ul>
+            <a href="" id="sticky-show">
+                <h1><i class="fa fa-note-sticky"></i>Sticky Notes</h1>
+            </a>
+            <div class="side-panel-toggle" id="panel-toggle">
+                <i class="fa fa-arrow-left"></i>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
+        
+        <!-- Tasks -->
+        <div class="task-display" id="task-display">
+            <!-- tasks go here -->
+        </div>
+        <!-- new task form -->
+        <div class="new-task-btn" id="add-task-btn">
+            <i class="fa fa-plus-circle"></i>Add New Task
+            <form class="new-task-form" id="new-task-form">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name">
+                <label for="task-date">Task Due-Date:</label>
+                <input type="date" id="task-date">
+                <div class="priority-btns">
+                    <button type="button" class="priority low-btn" id="low">Low</button>
+                    <button type="button" class="priority med-btn" id="medium">Medium</button>
+                    <button type="button" class="priority high-btn" id="high">High</button>
+                </div>
+                <input type="submit" value="Add">
+                <button class="btn close" type="button">Close</button>
+            </form>
+        </div>
+    </section>
+
     
 </body>
 </html>
